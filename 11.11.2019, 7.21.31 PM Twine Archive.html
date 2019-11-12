@@ -1,0 +1,80 @@
+<tw-storydata name="ROOM" startnode="1" creator="Twine" creator-version="2.3.5" ifid="70AC1BA2-328B-4811-AA31-AAF3DF532E71" zoom="0.6" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="The Start" tags="" position="620,301.5" size="100,100">YOU ARE IN A ROOM
+
+[[OKAY-&gt;OKAY]]
+
+
+
+(set: $UsedThing1 to false)
+(set: $UsedThing2 to false)
+(set: $UsedThing3 to false)</tw-passagedata><tw-passagedata pid="2" name="OKAY" tags="" position="620,451.5" size="100,100">(if: $UsedThing1 and $UsedThing2 and $UsedThing3)[ THIS PLACE IS EMPTY. THERE IS NOTHING HERE.
+
+[[BE DONE WITH HERE-&gt;DONE]]
+]
+(else:)[THE ROOM IS A SHAPE. INSIDE THE SHAPE THERE ARE OBJECTS. NEAR, ON TOP OF, INSIDE OF, AROUND, WITHIN ARE THINGS. SOME OF THE THINGS HAVE *MEANING*
+
+$UsedThing2[(text-style: &quot;shadow&quot;)[YOU ARE HOLDING A SENTIMENTAL THING. YOU FEEL A FEELING.]]
+
+[[INTERACT WITH THING YOU NEED TO LIVE-&gt;THING 1]]
+[[INTERACT WITH ITEM WITH SENTIMENTAL VALUE-&gt;THING 2]]
+[[INTERACT WITH THING YOU MEANT TO THROW AWAY-&gt;THING 3]]
+]
+
+
+
+</tw-passagedata><tw-passagedata pid="3" name="THING 1" tags="" position="395,601.5" size="100,100">$UsedThing1[YOU ALREADY CONSUMED THING. YOU ARE ALREADY LIVING.]
+(else:)[THIS IS A THING YOU NEED TO LIVE]
+
+
+
+(if: $UsedThing1 is false)[[USE THING-&gt;USE THING 1]]
+(if: $UsedThing1 is false)[[PUT IT AWAY-&gt;OKAY]]
+(if: $UsedThing1 is true)[[GO BACK-&gt;OKAY]]</tw-passagedata><tw-passagedata pid="4" name="THING 2" tags="" position="545,601.5" size="100,100">(if:$UsedThing2 is true)[THERE ARE NO MEMORIES LEFT HERE
+
+[[GO BACK-&gt;OKAY]]
+]
+(else:)[THIS THING REMINDS YOU OF A [PERSON]&lt;PERSON|. 
+
+|MEMORY1)[YOUR MEMORY OF THE PERSON IS FLEETING.]
+|MEMORY2)[(text-style:&quot;blur&quot;)[THERE IS A BLURRY IMAGE IN YOUR MIND, A MEMORY OF A MEMORY OF A FACE]]
+|MEMORY3)[(text-style:&quot;blur&quot;)[YOU CAN RECALL HOW THEY LOOK]]
+|MEMORY4)[(text-style:&quot;blurrier&quot;)[YOU REMEMBER THE SMELL OF THEIR BODY ODOR.]]
+
+(click: ?PERSON)[(show:?MEMORY1)]
+(click: ?MEMORY1)[(show:?MEMORY2)]
+(click: ?MEMORY2)[(show:?MEMORY3)]
+(click: ?MEMORY3)[(show:?MEMORY4)]
+
+[[TAKE SENTIMENTAL THING-&gt;TAKE SENTIMENTAL THING]]
+[[RETURN IT TO ITS PLACE-&gt;OKAY]]]</tw-passagedata><tw-passagedata pid="5" name="THING 3" tags="" position="695,601.5" size="100,100">$UsedThing3[THERE IS NOTHING HERE
+
+[[GO BACK-&gt;OKAY]]
+]
+(else:)[THIS THING DOESN&#39;T HAVE A PLACE
+
+[[GIVE IT A PLACE-&gt;GIVE IT A PLACE]]
+[[REMOVE IT FROM HERE-&gt;REMOVE IT FROM HERE]]
+[[GO BACK-&gt;OKAY]]
+]</tw-passagedata><tw-passagedata pid="6" name="THING 4" tags="" position="845,601.5" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name="USE THING 1" tags="" position="395,751.5" size="100,100">YOU CONSUMED IT. YOU MAY CONTINUE LIVING.
+(set: $UsedThing1 to true)
+
+[[OKAY-&gt;OKAY]]</tw-passagedata><tw-passagedata pid="8" name="TAKE SENTIMENTAL THING" tags="" position="545,751.5" size="100,100">YOU PUT THE SENTIMENTAL THING ON YOUR PERSON.
+(set: $UsedThing2 to true)
+
+[[OKAY-&gt;OKAY]]</tw-passagedata><tw-passagedata pid="9" name="GIVE IT A PLACE" tags="" position="665,751.5" size="100,100">THIS THING NOW HAS A SPOT ON TOP OF A CONTAINER. IT STILL HAS NO MEANING
+
+(set: $UsedThing3 is true)
+
+[[OKAY-&gt;OKAY]]</tw-passagedata><tw-passagedata pid="10" name="REMOVE IT FROM HERE" tags="" position="770,751.5" size="100,100">THE THING IS NO LONGER HERE
+
+(set: $UsedThing3 to true)
+[[OKAY-&gt;OKAY]]</tw-passagedata><tw-passagedata pid="11" name="DONE" tags="" position="916,388.5" size="100,100">END
+
+
+
+YOUR SCORE: -1
+
+
+[PLAY AGAIN]&lt;PA|
+
+(click:?PA)[(reload:)]</tw-passagedata></tw-storydata>
+
