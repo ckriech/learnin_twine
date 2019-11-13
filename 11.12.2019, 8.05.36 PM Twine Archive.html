@@ -1,0 +1,163 @@
+<tw-storydata name="Overt Trans Metaphor" startnode="1" creator="Twine" creator-version="2.3.5" ifid="2D6CF056-F363-4CDD-BB31-987B0DC70BBE" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="born" tags="" position="672,118.5" size="100,100">On the night you were born, the stars aligned in the shape of a spear.
+The magister who approved your ceremony carved a line down the center of your chest.
+The nurse who would raise you threaded a thin cable perpendicular to the cut, 2/3rds the way down.
+The master who would train you in the art of weaponry and combat melted the skin whole.
+
+Thus, you were assigned the role of |warrior&gt;[WARRIOR]
+
+|warriortext)[WARRIOR: Strong. Mighty. Fearless. Carriers of the Flame and the Crest. The protectors and leaders of us all.]
+
+[[next-&gt;childhood]]
+(display: &quot;skip&quot;)
+
+(click: ?warrior)[(show: ?warriortext)]
+
+(set: $sw to 1) &lt;!-- self-worth --&gt;
+(set: $bi to 1) &lt;!-- body-image --&gt;
+(set: $mh to 1) &lt;!-- mental health --&gt;
+(set: $fl to 1) &lt;!-- future-length --&gt;
+(set: $sw_text to &quot;Self Worth&quot;)
+(set: $bi_text to &quot;Body Image&quot;)
+(set: $mh_text to &quot;Mental Health&quot;)
+(set: $fl_text to &quot;Life Length&quot;)
+(set: $name to &quot;Otto Mansbury&quot;)
+(set: $day to 1)</tw-passagedata><tw-passagedata pid="2" name="childhood" tags="" position="672,268.5" size="100,100">Something never felt quite right about holding a spear. That&#39;s not true. It&#39;s not that the spear felt wrong. Or the gear that the masters gave you. The colors are a little drab. A lot of brown and grays. 
+
+The feeling didn&#39;t start until you were old enough to go out on skirmishes of your own, in a band of your fellow young warriors.
+
+It was the way they strutted when walking down the streets of the capitals, flaunting themsevles.
+
+It was the way you made battle. Hard. Quick. No subltey. Not all of the other warriors were like this.
+
+[[Then there was the way they looked at you-&gt;WIZARDS]]
+(display: &quot;skip&quot;)</tw-passagedata><tw-passagedata pid="3" name="WIZARDS" tags="" position="672,418.5" size="100,100">The others. 
+
+The WIZARDS.
+
+</tw-passagedata><tw-passagedata pid="4" name="day" tags="" position="1000,150" size="100,100">Day (print: $day)
+
+(display:&quot;status&quot;)
+
+[[Visit your partner-&gt;partner]]
+[[Head to the barracks-&gt;barracks]]
+[[Relax at the beach-&gt;beach]]
+[[Buy something at the market-&gt;sw+]]
+[[Wander around-&gt;something happens]]</tw-passagedata><tw-passagedata pid="5" name="partner" tags="" position="825,475" size="100,100">You find your partner in your shared quarters, huddled over a book, wearing a gossamer lavander robe that extends down past their feet. 
+
+Your partner looks up as you enter the room.
+
+&quot;Oh hey, did you want to head out and perform a quest today?&quot;
+
+[[&quot;Yes, let&#39;s go for a quest&quot;-&gt;questpartner]]
+[[&quot;No, I just want to talk&quot;-&gt;talkpartner]]
+[[&quot;No, sorry, I just wanted to say hello.&quot;-&gt;day]]</tw-passagedata><tw-passagedata pid="6" name="barracks" tags="" position="850,300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name="beach" tags="" position="1000,300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="Buy something at the market-&gt;" tags="" position="1150,300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="9" name="something happens" tags="" position="1300,300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="questpartner" tags="" position="675,625" size="100,100">You go on a quest with your partner! You spear a few goblins and your partner burns a bug bear with a spell.
+
+&lt;!-- +sw,-bi: you are following societies rules even as it eats you alive--&gt;
+(display: &quot;sw+&quot;)
+(display: &quot;bi-&quot;)
+
+[[next day-&gt;transition]]</tw-passagedata><tw-passagedata pid="11" name="talkpartner" tags="" position="825,625" size="100,100">You and your partner sit down at your dinner table.
+
+&quot;What did you want to talk about?&quot;
+
+(if:$bi&lt;3)[&quot;I hate my body.&quot;]
+(if:$sw&lt;3)[&quot;Why would anyone care about me?&quot;]
+(if:$mh&lt;3)[&quot;Ugh, I can&#39;t so it today, my brain is in a fog.&quot;]
+(if:$fl&lt;3)[&quot;I can&#39;t go on like this.&quot;]
+
+[[They look at you with pitty. 
+&quot;Oh, I&#39;m sorry hun.&quot;-&gt;day]]
+</tw-passagedata><tw-passagedata pid="12" name="menu" tags="" position="975,625" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="13" name="sw+" tags="" position="200,525" size="100,100">You feel like you are worth a little more to the world.(set: $sw to $sw + 1)</tw-passagedata><tw-passagedata pid="14" name="sw-" tags="" position="325,525" size="100,100">You are left with a sense like you don&#39;t belong in the world.(set: $sw to $sw-1)</tw-passagedata><tw-passagedata pid="15" name="bi+" tags="" position="200,650" size="100,100">You feel more comfortable in your skin.(set: $bi to $bi +1)</tw-passagedata><tw-passagedata pid="16" name="bi-" tags="" position="325,650" size="100,100">Something about your body seems off today.(set: $bi to $bi - 1)</tw-passagedata><tw-passagedata pid="17" name="mh+" tags="" position="200,775" size="100,100">You feel more focused and your thoughts are clearer than normal.(set: $mh to $mh + 1)</tw-passagedata><tw-passagedata pid="18" name="mh-" tags="" position="325,775" size="100,100">Your head feels foggy. You feel sad but you don&#39;t know why.(set: $mh to $mh - 1)</tw-passagedata><tw-passagedata pid="19" name="fl+" tags="" position="200,900" size="100,100">You are looking forward to the future.(set: $fl to $fl + 1)</tw-passagedata><tw-passagedata pid="20" name="fl-" tags="" position="325,900" size="100,100">You can&#39;t seem to think past tomorrow.(set: $fl to $fl - 1)</tw-passagedata><tw-passagedata pid="21" name="check_conditions" tags="" position="450,775" size="100,100">(if: $sw is 0)[(goto: &quot;end&quot;)](if: $bi is 0)[(goto: &quot;end&quot;)](if: $mh is 0)[(goto: &quot;end&quot;)](if: $fl is 0)[(goto: &quot;end&quot;)]</tw-passagedata><tw-passagedata pid="22" name="transition" tags="lol" position="450,625" size="100,100">&lt;!--(display: &quot;check_condition&quot;)--&gt;
+(if: $sw is 0)[(goto: &quot;end&quot;)]
+(elseif: $bi is 0)[(goto: &quot;end&quot;)]
+(elseif: $mh is 0)[(goto: &quot;end&quot;)]
+(elseif: $fl is 0)[(goto: &quot;end&quot;)]
+(else:)[(goto: &quot;day&quot;)]</tw-passagedata><tw-passagedata pid="23" name="skip" tags="" position="325,125" size="100,100">[[skip all of this-&gt;day]]</tw-passagedata><tw-passagedata pid="24" name="status" tags="" position="450,425" size="100,100">Status:
+
+(print:$sw_text): (print:$sw)
+(print:$bi_text): (print:$bi)
+(print:$mh_text): (print:$mh)
+(print:$fl_text): (print:$fl)</tw-passagedata><tw-passagedata pid="25" name="end" tags="" position="450,950" size="100,100">THIS IS THE END
+
+[[restart?-&gt;born]]</tw-passagedata></tw-storydata>
+
+<tw-storydata name="ROOM" startnode="1" creator="Twine" creator-version="2.3.5" ifid="70AC1BA2-328B-4811-AA31-AAF3DF532E71" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="The Start" tags="" position="620,301.5" size="100,100">YOU ARE IN A ROOM
+
+[[OKAY-&gt;OKAY]]
+
+
+
+(set: $UsedThing1 to false)
+(set: $UsedThing2 to false)
+(set: $UsedThing3 to false)</tw-passagedata><tw-passagedata pid="2" name="OKAY" tags="" position="620,451.5" size="100,100">(if: $UsedThing1 and $UsedThing2 and $UsedThing3)[ THIS PLACE IS EMPTY. THERE IS NOTHING HERE.
+
+[[BE DONE WITH HERE-&gt;DONE]]
+]
+(else:)[THE ROOM IS A SHAPE. INSIDE THE SHAPE THERE ARE OBJECTS. NEAR, ON TOP OF, INSIDE OF, AROUND, WITHIN ARE THINGS. SOME OF THE THINGS HAVE *MEANING*
+
+$UsedThing2[(text-style: &quot;shadow&quot;)[YOU ARE HOLDING A SENTIMENTAL THING. YOU FEEL A FEELING.]]
+
+[[INTERACT WITH THING YOU NEED TO LIVE-&gt;THING 1]]
+[[INTERACT WITH ITEM WITH SENTIMENTAL VALUE-&gt;THING 2]]
+[[INTERACT WITH THING YOU MEANT TO THROW AWAY-&gt;THING 3]]
+]
+
+
+
+</tw-passagedata><tw-passagedata pid="3" name="THING 1" tags="" position="395,601.5" size="100,100">$UsedThing1[YOU ALREADY CONSUMED THING. YOU ARE ALREADY LIVING.]
+(else:)[THIS IS A THING YOU NEED TO LIVE]
+
+
+
+(if: $UsedThing1 is false)[[USE THING-&gt;USE THING 1]]
+(if: $UsedThing1 is false)[[PUT IT AWAY-&gt;OKAY]]
+(if: $UsedThing1 is true)[[GO BACK-&gt;OKAY]]</tw-passagedata><tw-passagedata pid="4" name="THING 2" tags="" position="550,600" size="100,100">(if:$UsedThing2 is true)[THERE ARE NO MEMORIES LEFT HERE
+
+[[GO BACK-&gt;OKAY]]
+]
+(else:)[THIS THING REMINDS YOU OF A [PERSON]&lt;PERSON|. 
+
+|MEMORY1)[YOUR MEMORY OF THE PERSON IS FLEETING.]
+|MEMORY2)[(text-style:&quot;blur&quot;)[THERE IS A BLURRY IMAGE IN YOUR MIND, A MEMORY OF A MEMORY OF A FACE]]
+|MEMORY3)[(text-style:&quot;blur&quot;)[YOU CAN RECALL HOW THEY LOOK]]
+|MEMORY4)[(text-style:&quot;blurrier&quot;)[YOU REMEMBER THE SMELL OF THEIR BODY ODOR.]]
+
+(click: ?PERSON)[(show:?MEMORY1)]
+(click: ?MEMORY1)[(show:?MEMORY2)]
+(click: ?MEMORY2)[(show:?MEMORY3)]
+(click: ?MEMORY3)[(show:?MEMORY4)]
+
+[[TAKE SENTIMENTAL THING-&gt;TAKE SENTIMENTAL THING]]
+[[RETURN IT TO ITS PLACE-&gt;OKAY]]]</tw-passagedata><tw-passagedata pid="5" name="THING 3" tags="" position="700,600" size="100,100">$UsedThing3[THERE IS NOTHING HERE
+
+[[GO BACK-&gt;OKAY]]
+]
+(else:)[THIS THING DOESN&#39;T HAVE A PLACE
+
+[[GIVE IT A PLACE-&gt;GIVE IT A PLACE]]
+[[REMOVE IT FROM HERE-&gt;REMOVE IT FROM HERE]]
+[[GO BACK-&gt;OKAY]]
+]</tw-passagedata><tw-passagedata pid="6" name="THING 4" tags="" position="845,601.5" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name="USE THING 1" tags="" position="395,751.5" size="100,100">YOU CONSUMED IT. YOU MAY CONTINUE LIVING.
+(set: $UsedThing1 to true)
+
+[[OKAY-&gt;OKAY]]</tw-passagedata><tw-passagedata pid="8" name="TAKE SENTIMENTAL THING" tags="" position="545,751.5" size="100,100">YOU PUT THE SENTIMENTAL THING ON YOUR PERSON.
+(set: $UsedThing2 to true)
+
+[[OKAY-&gt;OKAY]]</tw-passagedata><tw-passagedata pid="9" name="GIVE IT A PLACE" tags="" position="675,750" size="100,100">THIS THING NOW HAS A SPOT ON TOP OF A CONTAINER. IT STILL HAS NO MEANING
+
+(set: $UsedThing3 is true)
+
+[[OKAY-&gt;OKAY]]</tw-passagedata><tw-passagedata pid="10" name="REMOVE IT FROM HERE" tags="" position="770,751.5" size="100,100">THE THING IS NO LONGER HERE
+
+(set: $UsedThing3 to true)
+[[OKAY-&gt;OKAY]]</tw-passagedata><tw-passagedata pid="11" name="DONE" tags="" position="916,388.5" size="100,100">END
+
+
+
+YOUR SCORE: -1
+
+
+[PLAY AGAIN]&lt;PA|
+
+(click:?PA)[(reload:)]</tw-passagedata></tw-storydata>
+
